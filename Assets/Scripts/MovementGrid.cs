@@ -126,7 +126,7 @@ public class MovementGrid : MonoBehaviour
     /// <returns>A list of nodes adjacent to the specified node (cardinal directions only, no diagonals).</returns>
     public List<Node> GetAdjacentNodes(Node node)
     {
-        List<Node> neighbours = new List<Node>();
+        List<Node> adjacentNodes = new List<Node>();
 
         for (int x = -1; x <= 1; x++) 
         {
@@ -144,10 +144,10 @@ public class MovementGrid : MonoBehaviour
                 int checkX = node.gridX + x;
                 int checkY = node.gridY + y; 
 
-                if (checkX >= 0 && checkX < gridSize.x && checkY >= 0 && checkY < gridSize.y) { neighbours.Add(Grid[checkX, checkY]); }
+                if (checkX >= 0 && checkX < gridSize.x && checkY >= 0 && checkY < gridSize.y) { adjacentNodes.Add(Grid[checkX, checkY]); }
             }
         }
 
-        return neighbours;
+        return adjacentNodes;
     }
 }
