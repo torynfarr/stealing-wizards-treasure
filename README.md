@@ -4,7 +4,7 @@ This repository contains an example of a 2D tile-based game made in Unity. The p
 <br />
 
 ## A* Pathfinding
-The main highlight of this example game is A* pathfinding. The *Wizards.cs* script component attached to the *Wizard* gameobject finds the shortest path between the Wizard's current location and the location occupied by the player. The floor tilemap is used to automatically generate a 2D array of nodes, each node representing an individual floor tile. During the generation of that array, the wall tilemap is examine to determine if there is a wall over the current floor tile. If there is, the node is marked as not "walkable."
+The main highlight of this example game is A* pathfinding. The *Wizards.cs* script component attached to the *Wizard* gameobject finds the shortest path between the Wizard's current location and the location occupied by the player. The floor tilemap is used to automatically generate a 2D array of nodes, each node representing an individual floor tile. During the generation of that array, the wall tilemap is examined to determine if there is a wall over the current floor tile. If there is, the node is marked as not "walkable."
 
 In the *FixedUpdate* method in the *Wizard.cs* script component, the *UpdateDestination* method is called every one second. In that method, the destination is only updated if the distance the player has moved since the last time the destination was updated is greater than 0.5 (accessible via a property called *distanceToRecalulate* which can be set via the inspector on the *Wizard* gameobject.) When the destination is updated, the Wizard stops and then refresh the path to the player's location. The timing of events makes it so that the Wizard never appears to stop moving.
 
@@ -24,7 +24,7 @@ This project showcases the ability to balance movement speeds of the player and 
 
 # Additional Information
 
-- This example project wascreated using Unity version 2021.3.4f1
+- This example project was created using Unity 6.1 (6000.1.6f1)
 - The sprites are borrowed from the MS-DOS EGA version of Ultima V
-- The music is borrowed from the the Apple II version of Ultima IV (played through the Mockingbird sound card)
+- The music is borrowed from the Apple II version of Ultima IV (played through the Mockingbird sound card)
 - The sound effects are borrowed from Sinistar, Wolfenstein 3D, Doom, and The Legend of Zelda
